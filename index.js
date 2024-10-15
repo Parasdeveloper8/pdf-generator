@@ -1,19 +1,30 @@
 const express = require("express");
+
 const puppeteer = require('puppeteer');
+
+const dotenv = require("dotenv").config();
+
 const fs = require("fs");
+
 const path = require('path');
+
 const app = express();
+
 const multer = require("multer"); 
+
 const ejs = require("ejs");
 
 app.use(express.urlencoded({ extended: false }));
+
 const port = 8000;
 
 app.set("view engine", "ejs");
+
 app.set("views", "./views");
 
 // Serve static files
 app.use(express.static('public'));
+
 app.use('/uploads', express.static('uploads'));
 
 app.get("/", (req, res) => {
@@ -36,6 +47,7 @@ app.post('/generate', upload.single('profileImage'), async (req, res) => {
     try {
         // Launch Puppeteer in headless mode
         const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox'] });
+        
         const page = await browser.newPage();
 
         // HTML content to be converted to PDF
@@ -97,6 +109,7 @@ app.post('/generate', upload.single('profileImage'), async (req, res) => {
 
         // Set headers and send the generated PDF as a response
         res.setHeader('Content-Type', 'application/pdf');
+        
         res.setHeader('Content-Disposition', 'attachment; filename=generated.pdf');
 
         // Send the PDF file
