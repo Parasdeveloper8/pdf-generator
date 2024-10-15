@@ -2,7 +2,7 @@ const express = require("express");
 
 const puppeteer = require('puppeteer');
 
-const dotenv = require("dotenv").config;
+const dotenv = require("dotenv").config();
 
 const fs = require("fs");
 
