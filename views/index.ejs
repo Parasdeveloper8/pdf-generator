@@ -3,51 +3,74 @@
     <head>
   <title>Resume Generator</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-  <h1>Generate Resume with me</h1>
-  <p>No need to <strong>Signup</strong></p>
+      <header>
+      <h1>Resume Generator</h1>
+      </header>
+      <main>
+  <p class="feature">Generate resume in few steps</p>
+  <p class="feature">No need to <strong>Signup</strong></p>
   <form action="/generate" method="post" enctype="multipart/form-data">
     <label for="name">Enter your name</label>
-    <input type="text" name="name" id="name"/>
+    <br>
+    <input type="text" name="name" id="name" class="in"/>
     <br>
     <label for="age">Enter your age</label>
-    <input type="number" name="age" id="age"/>
+    <br>
+    <input type="number" name="age" id="age" class="in"/>
     <br>
     <label for="email">Enter Email</label>
-    <input type="email" name="email" id="email"/>
+    <br>
+    <input type="email" name="email" id="email" class="in"/>
     <br>
     <label for="about-me">Enter about yourself</label>
-    <input type="text" name="about" id="about-me"/>
+    <br>
+    <input type="text" name="about" id="about-me" class="in"/>
     <br>
     <label for="address">Enter Address</label>
-    <input type="text" name="address" id="address"/>
+    <br>
+    <input type="text" name="address" id="address" class="in"/>
     <br>
     <label for="primary">Enter about your primary education ex:- From where did you completed this</label>
-    <input type="text" name="primary" id="primary"/>
+    <br>
+    <input type="text" name="primary" id="primary" class="in"/>
     <br>
     <label for="secondary">Enter about your secondary education</label>
-    <input type="text" name="secondary" id="secondary"/>
+    <br>
+    <input type="text" name="secondary" id="secondary" class="in"/>
     <br>
     <label for="senior-secondary">Enter about senior secondary education</label>
-    <input type="text" name="seniors" id="senior-secondary"/>
+    <br>
+    <input type="text" name="seniors" id="senior-secondary" class="in"/>
     <br>
     <label for="college">Enter about college education</label>
-    <input type="text" name="college" id="college"/>
+    <br>
+    <input type="text" name="college" id="college" class="in"/>
     <br>
     <label for="skills">Enter your skills</label>
-    <input type="text" name="skills" id="skills"/>
+    <br>
+    <input type="text" name="skills" id="skills" class="in"/>
     <br>
     <label for="color">Select text color</label>
+    <br>
     <input type="color" id="color" name="color"/>
     <br>
     <label for="fontSize">Enter font size</label>
-    <input type="number" id="fontSize" name="fontSize"/>
+    <br>
+    <input type="number" id="fontSize" name="fontSize" class="in"/>
     <br> 
     <label for="image">Provide your image</label>
+    <br>
     <input type="file" name="profileImage" id="image">
     <br>
-    <input type="submit" value="generate pdf"/>
+    <button type="submit">Generate</button>
   </form>
+  <p class="note">Note : We don't store any type of data</p>
+  </main>
+  <footer>
+    <p>Made in India </p>
+  </footer>
     </body>
 </html>

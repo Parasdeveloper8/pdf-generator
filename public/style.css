@@ -1,0 +1,63 @@
+body{
+    width:100vw;
+    margin:0;
+    overflow-x: hidden;
+    font-family: system-ui;
+}
+h1{
+    text-align: center;
+    color:rgb(42, 241, 241);
+}
+header{
+    position: sticky;
+    top:0;
+}
+main{
+    background-color: aqua;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    margin-left: 15vw;
+    margin-right: 15vw;
+    border-radius: 20px;
+    & > .in{
+        width:30vw;
+        height:30px;
+        border:none;
+        background-color: antiquewhite;
+    }
+    & > label{
+        font-size: 1.2rem;
+        font-weight: bolder;
+    }
+    & > button{
+        width:20vw;
+        height:30px;
+        border:none;
+        background-color: aqua;
+        color:white;
+        font-weight: 900;
+        border-radius: 5px;
+        box-shadow: 0  0 5px aqua;
+        margin-bottom:5vh;
+    }
+   
+}
+.feature{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.note{
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 2vh;
+}
+footer > p{
+    font-weight: bolder;
+    text-align: center;
+    font-size: 1rem;
+}
