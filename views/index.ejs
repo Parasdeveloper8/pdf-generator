@@ -7,7 +7,7 @@
     <body>
   <h1>Generate Resume with me</h1>
   <p>No need to <strong>Signup</strong></p>
-  <form action="/generate" method="post">
+  <form action="/generate" method="post" enctype="multipart/form-data">
     <label for="name">Enter your name</label>
     <input type="text" name="name" id="name"/>
     <br>
@@ -44,6 +44,9 @@
     <label for="fontSize">Enter font size</label>
     <input type="number" id="fontSize" name="fontSize"/>
     <br> 
+    <label for="image">Provide your image</label>
+    <input type="file" name="profileImage" id="image">
+    <br>
     <input type="submit" value="generate pdf"/>
   </form>
     </body>
