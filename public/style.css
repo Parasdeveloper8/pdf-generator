@@ -27,8 +27,12 @@ form{
     & > .in{
         width:30vw;
         height:30px;
+        box-sizing: border-box;
         border:none;
         background-color: antiquewhite;
+        &:hover{
+            border-bottom: 2px solid aqua;
+        }
     }
     & > label{
         font-size: 1.2rem;
