@@ -44,6 +44,10 @@ form{
         border-radius: 5px;
         box-shadow: 0  0 5px aqua;
         margin-bottom:5vh;
+        &:hover{
+            color:white;
+            background-color: black;
+        }
     }
    
 }

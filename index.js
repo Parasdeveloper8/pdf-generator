@@ -36,7 +36,7 @@ const upload = multer({ dest: 'uploads/' });
 
 app.post('/generate', upload.single('profileImage'), async (req, res) => {
     // Extract form data
-    const { name, email, age, about, address, skills, primary, secondary, seniors, college, fontSize, color } = req.body;
+    const { name, email, age, about, address, skills, primary, secondary, seniors, college, contact,fontSize, color ,dob} = req.body;
     
     // Font size for the HTML content
     const pxfont = fontSize + "px";
@@ -80,6 +80,7 @@ app.post('/generate', upload.single('profileImage'), async (req, res) => {
               <p><b>Name:</b> ${name}</p>
               <p><b>Email:</b> ${email}</p>
               <p><b>Age:</b> ${age}</p>
+              <p><b>Date of Birth:</b> ${dob}</p>
               <fieldset>
               <legend><b>About me</b></legend>
               <p>${about}</p>
@@ -93,6 +94,7 @@ app.post('/generate', upload.single('profileImage'), async (req, res) => {
               <p><b>College education:</b> ${college}</p>
               </fieldset>
               <p><b>My skills:</b> ${skills}</p>
+              <p><b>Contact:</b> ${contact}</p>
               </body>
               </html>
         `;
