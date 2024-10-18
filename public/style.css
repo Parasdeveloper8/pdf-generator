@@ -5,15 +5,16 @@ body{
     font-family: system-ui;
 }
 h1{
-    text-align: center;
-    color:rgb(42, 241, 241);
+    padding-left: 2vw;
 }
 header{
     position: sticky;
     top:0;
 }
 main{
-    background-color: aqua;
+    background-image: url("./images/resume.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 form{
     display: flex;
@@ -42,19 +43,16 @@ form{
         width:20vw;
         height:30px;
         border:none;
-        background-color: aqua;
         color:white;
         font-weight: 900;
         border-radius: 5px;
-        box-shadow: 0  0 5px aqua;
+        background: linear-gradient(to right,red,rgb(236, 17, 17));
         margin-bottom:5vh;
-        &:hover{
-            color:white;
-            background-color: black;
-        }
+        box-shadow:0 0 5px black;
     }
    
 }
+
 .feature{
     font-size: 1.5rem;
     text-align: center;
@@ -68,4 +66,15 @@ footer > p{
     font-weight: bolder;
     text-align: center;
     font-size: 1rem;
+}
+@media only screen and (max-width:800px) {
+    body{
+        width:100vw;
+        box-sizing: border-box;
+    }
+    form{
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+  
 }
